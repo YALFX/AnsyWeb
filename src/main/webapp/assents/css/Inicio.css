@@ -1,15 +1,17 @@
-*{
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: 'Bubblegum Sans', cursive;*/
     font-family: 'Quicksand', sans-serif;
+    
 
 }
 
 
 body{
+    
     font:100% sans-serif;
+    
     
 }
 .contenedor{
@@ -66,7 +68,6 @@ nav > a:hover{
      
 }
 
-
 header .textos-header{
     display: flex;
     height: 430px;
@@ -116,6 +117,23 @@ header .textos-header{
 }
 .contenido-textos h3{
     margin-bottom: 10px;
+}
+
+.card-body{
+    
+}
+
+.card-body h3{
+    font-size: 2em;
+    color: #293172;
+    margin: 20px 0px;
+    font-weight: bold;
+    
+}
+
+.container > h2{
+     margin: 20px auto;
+     color: #293172;
 }
 
 .contenido-textos h3 span{
@@ -211,8 +229,24 @@ header .textos-header{
     border: 3px solid #E0EAFC;
     border-radius: 50%;
     display: block;
-
+    
 }
+
+.card-body > img{
+    transition: 0.8s;
+    object-fit: cover;
+}
+.card-body > img:hover{
+    transform: scale(1.1);
+   
+}
+
+ .card-body > h5{
+    color: #00001E;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
 .cards .card > .contenido-texto-card{
     width: 100%;
     text-align: center;

@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+                <title>Asesores CCS</title>
+        
+        <!-- CSS only -->
+            
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></link>      
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&amp;display=swap" rel="stylesheet"/>
+        <link href="assents/css/pqrs.css" rel="stylesheet"/>
+        
+        
+    </h:head>
+    
+    <h:body>
+        
+        <!-- Inicio Barra Navegación -->
+        
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                
+                
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <a href="indexfinal.xhtml"><img class="navbar-link me-3" src="assents\Img\Logo\AsesoresCCS.png"  style="height: 3.3rem"/></a>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="Planes.xhtml">Planes</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="pqrs.xhtml">PQRS</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="nosotros.xhtml">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="#">Contactenos</a></li>
+                        <li class="nav-item"><a href="login.xhtml"><button type="button" class="btn btn-primary me-3">Iniciar Sesión</button></a></li>
+                        <li class="nav-item"><a href="register.xhtml"><button type="button" class="btn btn-success me-3">Registrate</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Fin Barra Navegación -->
+        
+        <!-- ccsasesores/img -->
+        <img src="assents/Img/Flyers/pqrsAsesoresccs.jpg" class="img-fluid" alt=""/> 
+      
+        <!-- Inicio formato pqrs -->
+        <form>
+        <div class="container">
+            <div class="row">
+                    <!-- Columna 1--> 
+                     <div class="col-md-6">
+                        <h4>Datos de quien realiza la solicitud</h4>
+                        <!-- Nombre -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="exampleText" aria-describedby="Nombre"/>
+                        </div>
+                        <!-- Apellido -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="exampleText" aria-describedby="Nombre"/>
+                        </div>
+                        <!-- Correo electrónico -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Correo Electrónico:</label>
+                            <img src="assents\Img\Iconos\Correo.png" alt="username-icon" style="height: 1rem"/>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                            
+                        </div>
+                        <!-- Tipo documento -->
+                        <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Tipo documento:</label>
+                        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+                            <option value="1">Seleccione...</option>
+                            <option value="2">C.C</option>
+                            <option value="3">T.I</option>
+                            <option value="4">NIT</option>
+                            <option value="5">C.E</option>
+                        </select>
+                        </div>
+                        <!-- Número de documento -->
+                         <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Número Documento:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        </div>
+                        <!-- Telefono -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Telefono:</label>
+                            <input type="text" class="form-control" id="exampleText" aria-describedby="Nombre"/>
+                        </div>
+                        <!-- Ciudad -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Ciudad:</label>
+                            <input type="text" class="form-control" id="exampleText" aria-describedby="Nombre"/>
+                        </div>
+                        
+                    </div>
+                    
+                
+                <!-- Columna 2--> 
+               
+                <div class="col-md-6">
+                    
+                    
+                    <h4>Información de la solicitud</h4>
+                    
+                    <!-- Seleccionar el tipo de Solicitud --> 
+                   
+                    <h6>Tipo de solicitud:</h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
+                            <label class="form-check-label" for="inlineCheckbox1">Petición</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"/>
+                            <label class="form-check-label" for="inlineCheckbox2">Queja</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"/>
+                            <label class="form-check-label" for="inlineCheckbox3">Reclamo</label>
+                    </div>
+                             <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"/>
+                            <label class="form-check-label" for="inlineCheckbox4">Sugerencia</label>
+                    </div>
+                    
+                    <!-- Fecha solicitud -->
+                        <div class="mb-2">
+                            <label for="exampleInputEmail1" class="form-label">Fecha solicitud:</label>
+                            <input type="text" class="form-control" id="exampleText" aria-describedby="Nombre" placeholder="DD/MM/AAAA"/>
+                        </div>
+                            
+                            
+                            <!-- TextArea Descripción Solicitud -->   
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Describa el motivo de su solicitud:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <!-- Adjuntar documentos-->
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label"> Si es el caso; adjunte documentos que sustenten su solicitud
+                                                                         (Facturas, comprobantes, pantallazos,etc.):</label>
+                                <input class="form-control" type="file" id="formFile"/>
+                            </div>
+                            
+                            <!--Tratamiento de datos-->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
+                                <label class="form-check-label" style="text-align: justify" for="inlineCheckbox1">
+                                 Autorizo de manera voluntaria el tratamiento de mis datos personales.
+                                </label>
+                            </div>
+                            
+                            <!-- Boton Enviar-->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary" type="button"> Enviar solicitud</button>
+                            </div>
+                    </div>
+              
+                </div>
+        </div>
+                
+         
+        
+        </form>
+        <!-- Fin formato pqrs -->
+        
+       
+         
+             
+         
+             
+        
+        <!-- Inicio Footer -->
+         <footer class="text-white pt-3 pb-3" style="background-color: #00001E;">
+            <div class="container  text-md-left gap-2">
+                <div class="row  text-md-left">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        
+                        <h5 class="text-Capitalize mb-3 font-weight-bold">Sobre Nosotros</h5>
+                        
+                        <p><img src="assents\Img\Iconos\iconoCCS.png" alt="username-icon" style="height: 1rem"></img>
+                            <a href="nosotros.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Asesores CCS</a></p>
+                        <!--Yinooooo en el href de Asesores CCS colocar la pagina de quienes somos (nosotros.xhtml)la linea anterior a esta -->
+                        
+                        <p></p>
+                    </div>
+                    <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">                    
+                        <h5 class="text-Capitalize mb-3 font-weight-bold">Links</h5>
+                        
+                        <p><img src="assents\Img\Iconos\Usuario.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <a href="cliente/perfil.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Clientes</a></p>
+                        
+                        <p><img src="assents\Img\Iconos\Password.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <a href="administrador/admin.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Admin</a></p>
+                    </div>
+                        
+                    
+                    <div class="col-md-3 col-lg-3 col-xl-3 mt-3">
+                        <h5 class="text-Capitalize mb-3 fw-semibold">Contáctenos</h5>
+                        
+                        <p><img src="assents\Img\Iconos\Ubicacion.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <i class="text-Capitalize  mb-1 fw-ligth gap-2" style="text-decoration: none; text-align: left;">Bogotá D.C, Colombia</i></p>
+                        
+                        <p><img src="assents\Img\Iconos\Correo.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <i class="text-Capitalize  mb-1  fw-ligth gap-2" style="text-decoration: none; text-align: left;">asesoresCCS@gmail.com</i></p>
+                        
+                        <p><img src="assents\Img\Iconos\Telefono.png" alt="username-icon" style="height: 0.8rem"></img>
+                            <i class="text-Capitalize  mb-1  fw-ligth gap-2" style="text-decoration: none; text-align: left;">+57 (601) 792-4530</i></p>
+                       
+                    </div>
+                        
+                    </div>
+                </div>
+                    
+         </footer>
+        
+        <!-- Fin Footer -->
+                    
+        
+        
+        
+        
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    </h:body>
+</html>
+

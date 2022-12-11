@@ -19,18 +19,25 @@
         
         <!-- Inicio Barra Navegación -->
         
-        <nav class="navbar navbar-light navar-group" style="background-color: #e3f2fd;">
-            
-                <div class="container">
-                <a href="index.xhtml"><img class="navbar-link" src="assents\Img\Logo\AsesoresCCS.png"  style="height: 3.3rem"/></a>
-                <a class="navbar-link fw-bold text-primary text-decoration-none" href="Planes.xhtml"><h5>Planes y Servicios</h5></a>
-                <a class="navbar-link fw-bold text-primary text-decoration-none" href="Planes.xhtml"><h5>PQRS</h5></a>
-                <a class="navbar-link fw-bold text-primary text-decoration-none" href="#"><h5>Nosotros</h5></a>
-                <a class="navbar-link fw-bold text-primary text-decoration-none" href="#"><h5>Contáctenos</h5></a>
-                <a href="login.xhtml"><button type="button" class="btn btn-primary">Iniciar Session</button></a>
-                <a href="register.xhtml"><button type="button" class="btn btn-success">Registrarse</button></a>
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                
+                
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <a href="indexfinal.xhtml"><img class="navbar-link me-3" src="assents\Img\Logo\AsesoresCCS.png"  style="height: 3.3rem"/></a>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="Planes.xhtml">Planes</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="pqrs.xhtml">PQRS</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="nosotros.xhtml">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link active text-primary fw-bold me-3" aria-current="page" href="#">Contactenos</a></li>
+                        <li class="nav-item"><a href="login.xhtml"><button type="button" class="btn btn-primary me-3">Iniciar Sesión</button></a></li>
+                        <li class="nav-item"><a href="register.xhtml"><button type="button" class="btn btn-success me-3">Registrate</button></a></li>
+                    </ul>
+                </div>
             </div>
-            </nav>
+        </nav>
+        
         <!-- Fin Barra Navegación -->
         
         <!-- Carousel -->
@@ -60,96 +67,112 @@
         <!-- Carousel -->
        
         
-    <!-- Fin Barra Navegación -->
+    
         
         
-        <!-- Inicio Nuestros Planes -->
+        <!-- Inicio Nuestros Planes--> 
         
-        <div class="container text-center p-3">
+        <div class="container">
         <h2>Nuestros planes</h2>
         </div>
         
         <main class="container align-items-center justify-content-center">
             
-            <!-- Medicina Prepagada -->
+            <!--Medicina Prepagada-->
+            
             <div class="row">
                 
-                <div class="col-12 col-lg-8 text-center p-2">
-                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                <div class="col-12 col-lg-4 p-2">
+                    <div class="card-body">
+                       <img src="assents/Img/planesindex/medicinaPrepagada.png" class="img-fluid rounded-2" alt=""/>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-8 p-2">
+                    <article class="card h-100" style="background-color: #CFE2FF; border: none;">
                         <div class="card-body">
-                            <h3>Medicina Prepagada</h3>
-                    <p class="text-start h5 m-2 lh-base">
+                            <h3 class="text-center text-primary">Medicina Prepagada</h3>
+                            
+                   <p  style="text-align: justify">
                    Puedes adquirir un plan de salud de manera voluntaría, adicional a los servicios que presta la 
                    entidad promotora de salud de tu preferencia. La medicina prepagada te ofrece una red de atención
                    mas amplia tanto en los servicios ambulatorios como en los servicios hospitalarios.
                    Planes con acceso directo a especialistas,planes sin limite de edad, consulta médica domiciliaría
                    24/7 y coberturas ambulatorías.</p>
-                            </div>
-                        
-                    </article>
-                </div>
-           
-                <div class="col-12 col-lg-4 p-2">
-                    <article class="card h-100 border-info shadow">
-                        <div class="card-body">
-                    <img src="assents/Img/planesindex/medicinaPrepagada.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                            
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="planes.xhtml" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Mas Información</a>
+                    </div>
+                            
                         </div>
                     </article>
                 </div>
-            </div>   
+            </div> 
             
-            <!-- Planes Complementarios -->
+             <!--Planes Complementarios-->
+             
                 <div class="row">
                     <div class="col-12 col-lg-4 p-2">
-                        <article class="card h-100 border-info shadow">
                         <div class="card-body">
                         <img src="assents/Img/planesindex/planesComplementarios.png" class="img-fluid mx-auto rounded-2" alt=""/>
                         </div>
-                        </article>
                     </div>
                     
-                <div class="col-12 col-lg-8 text-center p-2">
-                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
-                        <div class="card-body">
-                            <h3>Planes Complementarios</h3>
-                    <p class="text-start h5 m-2 lh-base">
+                <div class="col-12 col-lg-8 p-2">
+                    <article class="card h-100" style="background-color: #9EC5FE; border: none;">
+                    <div class="card-body">
+                            <h3 class="text-center">Planes Complementarios</h3>
+                       <p style="text-align: justify">
                        Servicio adicional que ofrecen las entidades promotoras de salud(EPS).Incluye coberturas 
                        asistenciales complementarias al plan de beneficios de salud para aquellos usuarios que 
                        deseen acceder a una mayor cobertura mediante su plan de beneficios de salud.
                        Planes complementarios ofertados por las EPS como un adicional,que cuentan con amplias
                     coberturas de acuerdo a lo que necesites.</p>
+           
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="planes.xhtml" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Mas Información</a>
+                    </div>
+                            
                     </div>
                     </article>
                 </div>
                 </div>
             
-            <!-- Planes Exequiales -->
+            <!--Planes Exequiales-->
+            
             <div class="row">
-                <div class="col-12 col-lg-8 text-center p-2">
-                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
-                        <div class="card-body">
-                    <h3>Planes Exequiales</h3>
-                    <p class="text-start h5 m-2 lh-base">
+                
+                <div class="col-12 col-lg-4 p-2">
+                    <div class="card-body">
+                        <img src="assents/Img/planesindex/planesExequiales.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-8 p-2">
+                    <article class="card h-100" style="background-color: #CFE2FF; border: none;">
+                    <div class="card-body">
+                    <h3 class="text-center text-primary">Planes Exequiales</h3>
+                    <p style="text-align: justify">
                     Los planes exequiales se han convertido en un apoyo para los usuarios por medio de la
                     poliza que cubre los gastos funebres del cotizante o de sus beneficiarios. Por medio del 
                     servicio exequial recibes acompañamiento y seguridad en este proceso dificil de sobrellevar.
                     Gestión de documentos con notaria y sector salud,traslado a nivel nacional, salas de velación,
                     entre otros.</p>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="col-12 col-lg-4 p-2">
-                    <article class="card h-100 border-info shadow">
-                        <div class="card-body">
-                    <img src="assents/Img/planesindex/planesExequiales.png" class="img-fluid mx-auto rounded-2" alt=""/>
-                        </div>
+                    
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="planes.xhtml" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Mas Información</a>
+                    </div>
+                    
+                    </div>
                     </article>
                 </div>
             </div>
+            
         </main> 
         <br></br>
-        <!-- Fin Nuestros Planes -->
+         <!--Fin Nuestros Planes -->
+        
+       
         
         
         <!-- Inicio somos mediadores -->
@@ -159,7 +182,7 @@
         
         <!-- Inicio Nuestros Servicios -->
         
-        <div class="container text-center p-3">
+        <div class="container">
         <h2>Nuestros servicios</h2>
         </div>
         
@@ -169,39 +192,36 @@
             <div class="row">
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
+                    
                         <div class="card-body">
-                            <h5>Odontología</h5>
                             <img src="assents/Img/serviciosindex/odontologia.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                            <h5 class="text-primary">Odontología</h5>
                         </div>
-                    </article>
+                   
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>Salud</h5>
                             <img src="assents/Img/serviciosindex/salud.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                            <h5 class="text-primary">Salud</h5>
                         </div>
-                    </article>
+                    
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>Bienestar</h5>
                             <img src="assents/Img/serviciosindex/bienestar.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                            <h5 class="text-primary">Bienestar</h5>
                         </div>
-                    </article>
+                    
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>Exequiales</h5>
                             <img src="assents/Img/serviciosindex/exequial.png" class="img-fluid mx-auto rounded-2" alt=""/>
+                            <h5 class="text-primary">Exequiales</h5>
                         </div>
-                    </article>
+                    
                 </div>
             </div>
         </main>
@@ -210,7 +230,7 @@
        
        <!-- Inicio Nuestros Aliados -->
         
-        <div class="container text-center p-3">
+        <div class="container">
         <h2>Nuestros aliados</h2>
         </div>
         
@@ -220,39 +240,34 @@
             <div class="row">
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>EPS Protección</h5>
                             <img src="assents/Img/eps/epsproteccion.png" class="img-fluid m-1 p-1 mx-auto" alt=""/>
+                            
                         </div>
-                    </article>
+                    
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2 border-primary">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>EPS Humanidad</h5>
+                            
                             <img src="assents/Img/eps/epshumanidad.png" class="img-fluid m-1 p-1 mx-auto" alt=""/>
+                            
                         </div>
-                    </article>
+                    
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>EPS Vital</h5>
                             <img src="assents/Img/eps/epsvital.png" class="img-fluid m-1 p-1 mx-auto" alt=""/>
                         </div>
-                    </article>
+                    
                 </div>
                 
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow">
                         <div class="card-body">
-                            <h5>EPS Sonreir</h5>
-                            <img src="assents/Img/eps/epssonreir.png" class="img-fluid m-1 p-1 mx-auto" alt=""/>
+                           <img src="assents/Img/eps/epssonreir.png" class="img-fluid m-1 p-1 mx-auto" alt=""/>
                         </div>
-                    </article>
+                   
                 </div>
             </div>
         </main>
@@ -267,7 +282,7 @@
        
        <!-- Inicio Nuestros clientes -->
         
-        <div class="container text-center p-3">
+        <div class="container">
         <h2>Opiniones algunos clientes</h2>
         </div>
         
@@ -281,36 +296,37 @@
                             <!-- Primera subfila -->
                             <div class="row">
                                 <div class="col-12 col-lg-8 text-center p-2">
-                                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                                    <article class="card h-100 shadow" style="background-color: #3D0A91; border: none;">
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <img src="assents/Img/opinionesClientes/cliente1.png" alt="" 
                                                  class="border-border-secondary border-3 rounded-circle img-thumbnail" width="70px"/>
                                                 
                                                 <div class="ps-3">
-                                                <h5 class="m-0 h5">Cliente 1</h5>
-                                                <h6 class="m-0 h6">Daniela Quintana</h6>
+                                                <h5 class="m-0 h5 text-white">Cliente 1</h5>
+                                                <h6 class="m-0 h6 text-white">Daniela Quintana</h6>
                                                 </div>
                                             </div>
-                                            <p class="text-start h6 m-2 lh-base">CSS Asesores me ha brindado la mejor atención, oportuna y de calidad.
-                                                                                 Excelente servicio.</p>
+                                            <p style="text-align: justify" class="text-white">
+                                                CSS Asesores me ha brindado la mejor atención, oportuna y de calidad.
+                                                Excelente servicio.</p>
                                         </div>
                                     </article>
                                 </div>
                                 
                                 <div class="col-12 col-lg-4 text-center p-2">
-                                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                                    <article class="card h-100 shadow" style="background-color: #0A58CA; border: none;">
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <img src="assents/Img/opinionesClientes/cliente2.png" alt="" 
                                                  class="border-border-secondary border-3 rounded-circle img-thumbnail" width="70px"/>
                                                 
                                                 <div class="ps-3">
-                                                <h5 class="m-0 h5">Cliente 2</h5>
-                                                <h6 class="m-0 h6">Sergio Torres</h6>
+                                                <h5 class="m-0 h5 text-white">Cliente 2</h5>
+                                                <h6 class="m-0 h6 text-white">Sergio Torres</h6>
                                                 </div>
                                             </div>
-                                            <p class="text-start h6 m-2 lh-base">Confio plenamente en los servicios que ofrecen. Recomendado.</p>
+                                            <p style="text-align: justify" class="text-white">Confio plenamente en los servicios que ofrecen, 100% Recomendado.</p>
                                         </div>
                                     </article>
                                 </div>
@@ -319,37 +335,37 @@
                             <!-- Segunda subfila -->
                             <div class="row">
                                 <div class="col-12 col-lg-8 text-center p-2">
-                                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                                    <article class="card h-100 shadow" style="background-color: #0A58CA; border: none;">
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <img src="assents/Img/opinionesClientes/cliente3.png" alt="" 
                                                  class="border-border-secondary border-3 rounded-circle img-thumbnail" width="70px"/>
                                                 
                                                 <div class="ps-3">
-                                                <h5 class="m-0 h5">Cliente 3</h5>
-                                                <h6 class="m-0 h6">Laura Jimenez</h6>
+                                                <h5 class="m-0 h5 text-white">Cliente 3</h5>
+                                                <h6 class="m-0 h6 text-white">Laura Jimenez</h6>
                                                 </div>
                                             </div>
-                                            <p class="text-start h6 m-2 lh-base">Tuve un inconveniente con el servicio de medicina prepagada
-                                                                                 que contrate y los asesores me ayudaron a resolverlo rapidamente.
-                                                                                 100% recomendado.</p>
+                                            <p style="text-align: justify" class="text-white">Tuve un inconveniente con el servicio de medicina prepagada
+                                                                                              que contrate y los asesores me ayudaron a resolverlo rapidamente.
+                                                                                              100% recomendado.</p>
                                         </div>
                                     </article>
                                 </div>
                                 
                                 <div class="col-12 col-lg-4 text-center p-2">
-                                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                                    <article class="card h-100 shadow" style="background-color: #293172; border: none;">
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <img src="assents/Img/opinionesClientes/cliente4.png" alt="" 
                                                  class="border-border-secondary border-3 rounded-circle img-thumbnail" width="70px"/>
                                                 
                                                 <div class="ps-3">
-                                                <h5 class="m-0 h5">Cliente 4</h5>
-                                                <h6 class="m-0 h6">Daniel Ortiz</h6>
+                                                <h5 class="m-0 h5 text-white">Cliente 4</h5>
+                                                <h6 class="m-0 h6 text-white">Daniel Ortiz</h6>
                                                 </div>
                                             </div>
-                                            <p class="text-start h6 m-2 lh-base">Servicio de calidad. Excelente empresa.</p>
+                                            <p style="text-align: justify" class="text-white">Servicio de calidad. Excelente empresa.</p>
                                         </div>
                                     </article>
                                 </div>
@@ -358,22 +374,22 @@
                 </div> 
                             
                 <div class="col-12 col-lg-3 text-center p-2">
-                    <article class="card h-100 border-info shadow" style="background-color: #e3f2fd;">
+                    <article class="card h-100 shadow" style="background-color: #3D0A91; border: none;">
                         <div class="card-body">
                         <div class="d-flex">
                             <img src="assents/Img/opinionesClientes/cliente5.png" alt="" 
                             class="border-border-secondary border-3 rounded-circle img-thumbnail" width="70px"/>
                                                 
                             <div class="ps-3">
-                            <h5 class="m-0 h5">Cliente 5</h5>
-                            <h6 class="m-0 h6">María Camila Castro</h6>
+                            <h5 class="m-0 h5 text-white">Cliente 5</h5>
+                            <h6 class="m-0 h6 text-white">María Camila Castro</h6>
                             </div>
                         </div>
-                            <p class="text-start h6 m-2 lh-base">En un principio no estaba segura de adquirir sus servicios
-                                                                 porque no tenía mucha información al respecto, pero ahora
-                                                                 me he dado cuenta que es una gran empresa. Su servicio al
-                                                                 cliente es excelente, te brindan asesoría de manera eficaz
-                                                                 y estan atentos a cada solicitud que envio.</p>
+                            <p style="text-align: justify" class="text-white">En un principio no estaba segura de adquirir sus servicios
+                                                                              porque no tenía mucha información al respecto, pero ahora
+                                                                              me he dado cuenta que es una gran empresa. Su servicio al
+                                                                              cliente es excelente, te brindan asesoría de manera eficaz
+                                                                              y estan atentos a cada solicitud que envio.</p>
                         </div>
                     </article>
                 </div> 
@@ -382,11 +398,12 @@
                  
             </div>
          </main>
+       <br></br>
        <!-- Fin Nuestros clientes -->
        
        
-        <!-- Inicio Footer -->
-         <footer class="text-white pt-3 pb-3 mt-5" style="background-color: #00001E;">
+     <!-- Inicio Footer -->
+         <footer class="text-white pt-3 pb-3" style="background-color: #00001E;">
             <div class="container  text-md-left gap-2">
                 <div class="row  text-md-left">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -394,18 +411,19 @@
                         <h5 class="text-Capitalize mb-3 font-weight-bold">Sobre Nosotros</h5>
                         
                         <p><img src="assents\Img\Iconos\iconoCCS.png" alt="username-icon" style="height: 1rem"></img>
-                            <a href="#" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Asesores CCS</a></p>
+                            <a href="nosotros.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Asesores CCS</a></p>
+                        <!--Yinooooo en el href de Asesores CCS colocar la pagina de quienes somos (nosotros.xhtml)la linea anterior a esta -->
                         
                         <p></p>
                     </div>
                     <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">                    
                         <h5 class="text-Capitalize mb-3 font-weight-bold">Links</h5>
                         
-                        <p><img src="assents/Img/icons/facebook.svg" alt="username-icon" style="height: 2rem; background: white; border-radius: 50%"></img>
-                        <a href="cliente/perfil.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Facebook</a></p>
+                        <p><img src="assents\Img\Iconos\Usuario.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <a href="cliente/perfil.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Clientes</a></p>
                         
-                        <p><img src="assents/Img/icons/instagram.svg" alt="username-icon" style="height: 2rem; background: white; border-radius: 25%"></img>
-                        <a href="administrador/index.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Instagram</a></p>
+                        <p><img src="assents\Img\Iconos\Password.png" alt="username-icon" style="height: 0.8rem"></img>
+                        <a href="administrador/index.xhtml" class="text-white fs-6 font-weight-bold" style="text-decoration: none;">Admin</a></p>
                     </div>
                         
                     
@@ -422,12 +440,6 @@
                             <i class="text-Capitalize  mb-1  fw-ligth gap-2" style="text-decoration: none; text-align: left;">+57 (601) 792-4530</i></p>
                        
                     </div>
-                    
-                   <!-- <div class="container text-center col-md-7 col-lg-8 fs-6">
-                        <p>Copyright © 2022 rights reserved by:
-                            <a href="#" style="text-decoration: none;">
-                                <strong class="text-warning fs-6">Terminos y Condiciones</strong>
-                            </a></p>-->
                         
                     </div>
                 </div>
@@ -436,11 +448,7 @@
         
         <!-- Fin Footer -->
                     
-        
-        
-        
-        
-        <!-- JavaScript Bundle with Popper -->
+             <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
     </h:body>

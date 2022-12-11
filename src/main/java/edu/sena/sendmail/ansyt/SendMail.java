@@ -14,11 +14,11 @@ import javax.mail.internet.MimeMessage;
 
 public class SendMail {
 
-    private String username = "yinsena@outlook.es";
-    private String passWord = "Cc147852369";
-    private String vmessage = "MENSAJE";
-    private Address[] receptores;
-    private String subject = "ASUNTO";
+    protected String username = "yinsena@outlook.es";
+    protected String passWord = "Cc147852369";
+    protected String vmessage = "MENSAJE";
+    protected Address[] receptores;
+    protected String subject = "ASUNTO";
 
     
     
@@ -29,6 +29,7 @@ public class SendMail {
         props.put("mail.smtp.host", "smtp-mail.outlook.com");
         props.put("mail.smtp.port", 587);
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, passWord);
             }

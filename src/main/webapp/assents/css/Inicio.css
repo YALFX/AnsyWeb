@@ -1,18 +1,12 @@
-*{ 
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-    
 
 }
 
-
 body{
-    
     font:100% sans-serif;
-    
-    
 }
 .contenedor{
     padding: 60px 0;
@@ -31,10 +25,9 @@ body{
 header{
     width: 100%;
     height: 600px;
-    background: #7F7FD5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5), url(../assents/Img/Flyers/ImgPrincipal.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: -webkit-linear-gradient(to right, #00E0FF, #CAF9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(187, 100%, 50%, 0.723), hsla(187, 27%, 86%, 0.756)), url(../Pruebas/barra_2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -47,8 +40,8 @@ header{
     margin-right: 50px;
     background-color: #82b3f875;
     font:100% sans-serif;
-   
-    
+
+
 }
 
 nav{
@@ -65,7 +58,6 @@ nav > a{
 
 nav > a:hover{
     text-decoration: none;
-     
 }
 
 header .textos-header{
@@ -100,62 +92,7 @@ header .textos-header{
     width: 100%;
 }
 
-.contenedor-sobre-nosotros{
-    display: flex;
-    justify-content: space-evenly;
 
-}
-.image-about-us{
-    margin-top: 7%;
-    width: 45%;
-    height: 45%;
-    
-}
-.sobre-nosotros .contenido-textos{
-    width: 40%;
-    
-}
-.contenido-textos h3{
-    margin-bottom: 10px;
-}
-
-.card-body{
-    
-}
-
-.card-body h3{
-    font-size: 2em;
-    color: #293172;
-    margin: 20px 0px;
-    font-weight: bold;
-    
-}
-
-.container > h2{
-     margin: 20px auto;
-     color: #293172;
-}
-
-.contenido-textos h3 span{
-    background: #95c1ff;
-    color: rgb(255, 255, 255);
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    box-shadow: 0 0 6px rgba black;
-    margin-right: 5px;
-    
-}
-
-.contenido-textos p{
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-
-}
 
 .portafolio{
     background: #ffffff;
@@ -202,7 +139,7 @@ header .textos-header{
     width: 50px;
 }
 .hover-galeria p{
-  color: #090808;
+    color: #090808;
 }
 .imagen-port:hover .hover-galeria{
     transform:scale(0);
@@ -229,24 +166,8 @@ header .textos-header{
     border: 3px solid #E0EAFC;
     border-radius: 50%;
     display: block;
-    
-}
 
-.card-body > img{
-    transition: 0.8s;
-    object-fit: cover;
 }
-.card-body > img:hover{
-    transform: scale(1.1);
-   
-}
-
- .card-body > h5{
-    color: #00001E;
-    margin: 10px 0px;
-    font-weight: bold;
-}
-
 .cards .card > .contenido-texto-card{
     width: 100%;
     text-align: center;
@@ -295,9 +216,42 @@ footer{
     color: azure;
 }
 label{
-    
+
     font: 100% sans-serif;
 }
 
+section .row{
+    margin-top: 1%;
+    height: 200px!important;
+}
+
+section img{
+    width: 100%;
+    height: 55%;
+}
+
+#INR{
+    background-color: rgba(255, 255, 255 , 0.9);
+    border-radius: 5%;
+
+    text-align: right;
+
+}
+
+#INL{
+
+    text-align: left;
+    background-color: rgba(255, 255, 255 , 0.9);
+    border-radius: 5%;
+    height: 205px!important;
+}
+
+#INC{
+    text-align: left
+}
+
+#ser{
+    background-image: url("../Img/fondos/fondo_2.jpg");
 
 
+}

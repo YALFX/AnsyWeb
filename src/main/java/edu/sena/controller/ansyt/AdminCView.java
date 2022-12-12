@@ -135,46 +135,48 @@ public class AdminCView implements Serializable {
             try {
 
                 InputStream inputStream = file.getInputStream();
-                XSSFWorkbook libro = new XSSFWorkbook(inputStream);
-                Sheet sheet = libro.getSheetAt(0);
-                Iterator<Row> iterator = sheet.iterator();
-                int i = 0;
-                while (iterator.hasNext()) {
-                    Row currentRow = iterator.next();
-                    int td;
-                    if (i > 0) {
-                        if (currentRow.getCell(0) != null && 
-                                currentRow.getCell(1) != null && 
-                                currentRow.getCell(2) != null && 
-                                currentRow.getCell(3) != null && 
-                                currentRow.getCell(4) != null && 
-                                currentRow.getCell(5) != null && 
-                                currentRow.getCell(6) != null && 
-                                currentRow.getCell(7) != null ){
-                            persona.setCliNombre(currentRow.getCell(0).getStringCellValue());
-                            persona.setCliApellido(currentRow.getCell(1).getStringCellValue());
-                            td = (int) currentRow.getCell(2).getNumericCellValue();
-                            persona.setCliTipoDocumento(ctd.find(td));
-                            persona.setCliNumeroDocumento((int)currentRow.getCell(3).getNumericCellValue());
-                            int n = (int) currentRow.getCell(4).getNumericCellValue();
-                            BigInteger bigInteger = BigInteger.valueOf(n);
-                            persona.setCliTelefono(bigInteger);
-                            Date fc = currentRow.getCell(5).getDateCellValue();
-                            persona.setCliFechaNacimiento(fc);
-                            persona.setCliSexo(currentRow.getCell(6).getStringCellValue());
-                            usuario.setUsCorreo(currentRow.getCell(7).getStringCellValue());
-                            usuario.setUsClave(currentRow.getCell(8).getStringCellValue());
-                            usuario.setRolTipo(rfl.find((int)currentRow.getCell(9).getNumericCellValue()));
-                            persona.setNameImg("user-profile-icon.jpg");
-                            cd.create(persona);
-                            ufl.create(usuario);
-                        } else {
-                            break;
+                try (XSSFWorkbook libro = new XSSFWorkbook(inputStream)) {
+                    Sheet sheet = libro.getSheetAt(0);
+                    Iterator<Row> iterator = sheet.iterator();
+                    int i = 0;
+                    while (iterator.hasNext()) {
+                        Row currentRow = iterator.next();
+                        int td;
+                        if (i > 0) {
+                            if (currentRow.getCell(0) != null &&
+                                    currentRow.getCell(1) != null &&
+                                    currentRow.getCell(2) != null &&
+                                    currentRow.getCell(3) != null &&
+                                    currentRow.getCell(4) != null &&
+                                    currentRow.getCell(5) != null &&
+                                    currentRow.getCell(6) != null &&
+                                    currentRow.getCell(7) != null ){
+                                persona.setCliNombre(currentRow.getCell(0).getStringCellValue());
+                                persona.setCliApellido(currentRow.getCell(1).getStringCellValue());
+                                td = (int) currentRow.getCell(2).getNumericCellValue();
+                                persona.setCliTipoDocumento(ctd.find(td));
+                                persona.setCliNumeroDocumento((int)currentRow.getCell(3).getNumericCellValue());
+                                int n = (int) currentRow.getCell(4).getNumericCellValue();
+                                BigInteger bigInteger = BigInteger.valueOf(n);
+                                persona.setCliTelefono(bigInteger);
+                                Date fc = currentRow.getCell(5).getDateCellValue();
+                                persona.setCliFechaNacimiento(fc);
+                                persona.setCliSexo(currentRow.getCell(6).getStringCellValue());
+                                usuario.setUsCorreo(currentRow.getCell(7).getStringCellValue());
+                                usuario.setUsClave(currentRow.getCell(8).getStringCellValue());
+                                usuario.setRolTipo(rfl.find((int)currentRow.getCell(9).getNumericCellValue()));
+                                persona.setNameImg("user-profile-icon.jpg");
+                                cd.create(persona);
+                                ufl.create(usuario);
+                            } else {
+                                break;
+                            }
                         }
+                        i++;
                     }
-                    i++;
+                } catch (Exception e){
+                    error("ERROR 120","");
                 }
-                libro.close();
                 info("Carga exitosa", "se agregaron los datos correctamente");
             } catch (Exception e) {
                 error("NO SE PUEDE SUBIR", "");

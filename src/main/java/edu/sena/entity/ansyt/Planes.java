@@ -34,6 +34,14 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Planes.findAll", query = "SELECT p FROM Planes p")})
 public class Planes implements Serializable {
 
+    @Lob
+    @Column(name = "Plan_img")
+    private byte[] planimg;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "plan")
+    private Collection<Citas> citasCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "plan")
+    private Collection<Comprobantes> comprobantesCollection;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,9 +77,6 @@ public class Planes implements Serializable {
     @Size(min = 1, max = 300)
     @Column(name = "Plan_Descripcion")
     private String planDescripcion;
-    @Lob
-    @Column(name = "Plan_img")
-    private byte[] planimg;
     @Size(max = 300)
     @Column(name = "Name_img")
     private String nameimg;
@@ -230,6 +235,24 @@ public class Planes implements Serializable {
     @Override
     public String toString() {
         return "edu.sena.entity.ansyt.Planes[ idPlan=" + idPlan + " ]";
+    }
+
+
+
+    public Collection<Citas> getCitasCollection() {
+        return citasCollection;
+    }
+
+    public void setCitasCollection(Collection<Citas> citasCollection) {
+        this.citasCollection = citasCollection;
+    }
+
+    public Collection<Comprobantes> getComprobantesCollection() {
+        return comprobantesCollection;
+    }
+
+    public void setComprobantesCollection(Collection<Comprobantes> comprobantesCollection) {
+        this.comprobantesCollection = comprobantesCollection;
     }
     
 }

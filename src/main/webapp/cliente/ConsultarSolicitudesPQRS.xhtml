@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&amp;display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assents/css/styles.css"></link>
+        <title>Solicitudes PQRS Clientes</title>
+    </h:head>
+
+    <h:body>
+
+        <div class="d-flex">
+
+            <div id="sidebar-container" class="bg-primary">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../assents/Img/LogoAsesoresDashboard.png" class="img-fluid rounded-circle align-center"/> 
+                </div>
+                <!-- Menú -->
+                <div class="menu">
+                    <a href="index.xhtml" class="d-block text-light p-3"><i class="icon ion-md-home m-2 lead"></i>Inicio</a>
+                    <a href="actualizarDatos.xhtml" class="d-block text-light p-3"><i class="icon ion-md-sync m-2 lead"></i>Actualizar Datos</a>
+                    <a href="planesAdquiridos.xhtml" class="d-block text-light p-3"><i class="icon ion-md-pulse m-2 lead"></i>Planes Adquiridos</a>
+                    <a href="descargarCertificado.xhtml" class="d-block text-light p-3"><i class="icon ion-md-paper m-2 lead"></i>Descargar Certificado</a>
+                    <a href="ConsultarSolicitudesPQRS.xhtml" class="d-block text-light p-3"><i class="icon ion-md-chatboxes m-2 lead"></i>Consultar PQRS</a>
+                </div>
+                <div class="inicio-Sesion">
+                    <h6 class="text-light font-weight-bold text-center">Inicio sesión como: Cliente</h6>
+                </div>
+            </div>
+
+
+
+
+            <!-- Barra navegación -->
+            <div class="w-100">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="col-lg-3">  
+
+                                <!-- Barra busqueda -->
+                                <form class="d-flex position-relative my-2 d-inline-block">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                    <button class="btn btn-search position-absolute" type="submit"><i class="icon ion-md-search"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Columna vacia -->
+                            <div class="col-lg-6"></div>
+
+                            <!-- menu inicio sesion -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div class="col-lg-3">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <img id="imagen" src="../assents/Img/JARV.jpg" class="img-fluid rounded-circle mr-2"/>
+
+                                                Jose Alejandro
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="perfilClientes.xhtml">Mi perfil</a></li>
+                                                <li><a class="dropdown-item" href="#">Notificaciones</a></li>
+                                                <li><hr class="dropdown-divider"></hr></li>
+                                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <!-- contenido -->
+
+              
+                    <div class="container">
+                        <!-- Titulo--> 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Consulta tus solicitudes PQRS</h2>
+                                
+                                <div class="container">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <label for="formFileMultiple" class="form-label">Fecha solicitud:</label>
+                                            <div class="p-2 border bg-light rounded-2">01/12/22</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="formFileMultiple" class="form-label">Tipo solicitud:</label>
+                                            <div class="p-2 border bg-light rounded-2">Petición</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="formFileMultiple" class="form-label">Respuesta por escrito a la solicitud:</label>
+                                            <div class="p-2 border bg-light rounded-2" style="text-align: justify">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit elementum suspendisse, 
+                                                vivamus hendrerit nullam molestie aptent et risus habitasse, per sapien turpis 
+                                                ligula consequat vehicula nostra iaculis. Placerat magnis ad aptent vestibulum 
+                                                torquent quisque eleifend, tincidunt potenti inceptos etiam mattis primis, 
+                                                suspendisse purus habitasse dis eget rhoncus. Nibh in dignissim convallis faucibus 
+                                                maecenas placerat dis turpis urna venenatis viverra, volutpat quisque gravida 
+                                                curabitur auctor facilisi sem risus montes rhoncus, taciti class hendrerit non 
+                                                facilisis phasellus proin nisi tempus ridiculus.
+                                                Aptent blandit torquent erat semper curabitur senectus sagittis libero, est conubia 
+                                                pretium nunc iaculis auctor cursus hendrerit tempus, class maecenas cubilia placerat
+                                                pharetra quisque dui. Netus pulvinar aliquam commodo ut auctor euismod in mauris purus
+                                                nullam taciti, eu tempus felis mattis quis himenaeos maecenas sollicitudin imperdiet 
+                                                metus, integer quisque fringilla aenean inceptos bibendum facilisis erat aptent pretium. 
+                                                Diam fames sociosqu lectus quis sapien sem convallis ut fermentum, aliquam platea massa
+                                                nisi turpis quam conubia ligula euismod odio, viverra tristique vel feugiat vehicula 
+                                                tincidunt tempus curabitur.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+              
+                
+            </div>
+        </div>
+
+
+
+
+
+        <!--Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    </h:body>
+</html>
+
+
+

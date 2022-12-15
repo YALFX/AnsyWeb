@@ -30,6 +30,13 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Estados.findAll", query = "SELECT e FROM Estados e")})
 public class Estados implements Serializable {
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "estado")
+    private Collection<Citas> citasCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "estado")
+    private Collection<Comprobantes> comprobantesCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pqrEstado")
+    private Collection<Pqrs> pqrsCollection;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -127,6 +134,30 @@ public class Estados implements Serializable {
     @Override
     public String toString() {
         return "edu.sena.entity.ansyt.Estados[ iDest=" + iDest + " ]";
+    }
+
+    public Collection<Citas> getCitasCollection() {
+        return citasCollection;
+    }
+
+    public void setCitasCollection(Collection<Citas> citasCollection) {
+        this.citasCollection = citasCollection;
+    }
+
+    public Collection<Comprobantes> getComprobantesCollection() {
+        return comprobantesCollection;
+    }
+
+    public void setComprobantesCollection(Collection<Comprobantes> comprobantesCollection) {
+        this.comprobantesCollection = comprobantesCollection;
+    }
+
+    public Collection<Pqrs> getPqrsCollection() {
+        return pqrsCollection;
+    }
+
+    public void setPqrsCollection(Collection<Pqrs> pqrsCollection) {
+        this.pqrsCollection = pqrsCollection;
     }
     
 }

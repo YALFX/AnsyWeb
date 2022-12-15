@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -30,6 +31,17 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Pqrs.findAll", query = "SELECT p FROM Pqrs p")})
 public class Pqrs implements Serializable {
 
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "descripcion")
+    private int descripcion;
+    @Lob
+    @Column(name = "archivo")
+    private byte[] archivo;
+    @JoinColumn(name = "pqr_Estado", referencedColumnName = "ID_est")
+    @ManyToOne(optional = false)
+    private Estados pqrEstado;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,11 +58,7 @@ public class Pqrs implements Serializable {
     @Size(min = 1, max = 150)
     @Column(name = "pqr_Descripcion")
     private String pqrDescripcion;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 15)
-    @Column(name = "pqr_Estado")
-    private String pqrEstado;
+    
     @JoinColumn(name = "Id_Cliente", referencedColumnName = "Id_Cliente")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Clientes idCliente;
@@ -62,7 +70,7 @@ public class Pqrs implements Serializable {
         this.idpqrs = idpqrs;
     }
 
-    public Pqrs(Integer idpqrs, String pqrTipo, String pqrDescripcion, String pqrEstado) {
+    public Pqrs(Integer idpqrs, String pqrTipo, String pqrDescripcion, Estados pqrEstado) {
         this.idpqrs = idpqrs;
         this.pqrTipo = pqrTipo;
         this.pqrDescripcion = pqrDescripcion;
@@ -93,13 +101,7 @@ public class Pqrs implements Serializable {
         this.pqrDescripcion = pqrDescripcion;
     }
 
-    public String getPqrEstado() {
-        return pqrEstado;
-    }
 
-    public void setPqrEstado(String pqrEstado) {
-        this.pqrEstado = pqrEstado;
-    }
 
     public Clientes getIdCliente() {
         return idCliente;
@@ -132,6 +134,30 @@ public class Pqrs implements Serializable {
     @Override
     public String toString() {
         return "edu.sena.entity.ansyt.Pqrs[ idpqrs=" + idpqrs + " ]";
+    }
+
+    public int getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(int descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public byte[] getArchivo() {
+        return archivo;
+    }
+
+    public void setArchivo(byte[] archivo) {
+        this.archivo = archivo;
+    }
+
+    public Estados getPqrEstado() {
+        return pqrEstado;
+    }
+
+    public void setPqrEstado(Estados pqrEstado) {
+        this.pqrEstado = pqrEstado;
     }
     
 }

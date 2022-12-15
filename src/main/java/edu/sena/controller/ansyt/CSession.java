@@ -6,6 +6,7 @@
 package edu.sena.controller.ansyt;
 
 //librerias enviar archivos
+import edu.sena.entity.ansyt.Citas;
 import java.io.IOException;
 import java.io.Serializable;
 import org.apache.poi.util.IOUtils;
@@ -43,6 +44,8 @@ import edu.sena.sendmail.ansyt.SendMail;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 /**
@@ -69,6 +72,7 @@ public class CSession implements Serializable {
 
     private Clientes persona = new Clientes();
     private Usuarios usuario = new Usuarios();
+    private Citas agenCita = new Citas();
     private String fechaS = "";
     private String genero = "";
     private int es = 6;
@@ -99,7 +103,7 @@ public class CSession implements Serializable {
                     rol = 1;
                 } else if (usuario.getRolTipo().getIdrol() == 2) {
                     FacesContext facesContext = FacesContext.getCurrentInstance();
-                    facesContext.getExternalContext().redirect("cliente/perfil.xhtml?faces-redirect=true");
+                    facesContext.getExternalContext().redirect("cliente/index.xhtml?faces-redirect=true");
                     id = usuario.getIDCliente().getIdCliente();
                     persona = cd.find(id);
                     fechaS = fechaString(persona.getCliFechaNacimiento());
@@ -137,6 +141,12 @@ public class CSession implements Serializable {
     public void warn(String mensaje, String detalle) {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, mensaje, detalle));
     }
+    
+   public String fechaActual() {
+      DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+      return dtf.format(LocalDateTime.now());
+   }
+    
 
 //    public List<Mensajes> listarTodosMensajesC() {
 //        try {
@@ -145,6 +155,9 @@ public class CSession implements Serializable {
 //            return null;
 //        }
 //    }
+    
+    
+    
 
     public void recuperarUsuario() {
         try {
@@ -222,61 +235,56 @@ public class CSession implements Serializable {
   
 
     public void actualizarDatos() throws IOException {
-        try {
+        Usuarios u = ufl.find(usuario.getIdUsuario());
+        Clientes c = cd.find(u.getIDCliente().getIdCliente());
+        if (u != null) {
+            c.setCliNombre(persona.getCliNombre());
+            c.setCliApellido(persona.getCliApellido());
+            TiposDocumentos td = ctd.find(tipoDocumento);
+            c.setCliTipoDocumento(td);
+            Roles role = rfl.find(rol);
+            u.setRolTipo(role);
+            EstadosCiviles se = esfl.find(es);
+            c.setCliEstadoCivil(se);
+            c.setCliNumeroDocumento(persona.getCliNumeroDocumento());
+            c.setCliSexo(genero);
+            c.setCliEPS(persona.getCliEPS());
+            c.setCliFechaNacimiento(ParseFecha(fechaS));
+            c.setCliNumeroHijos(persona.getCliNumeroHijos());
+            c.setCliTelefono(persona.getCliTelefono());
+            c.setCliPais(persona.getCliPais());
+            c.setCliDirección(persona.getCliDirección());
             
-            Usuarios u = ufl.find(usuario.getIdUsuario());
-            Clientes c = cd.find(u.getIDCliente().getIdCliente());
-            if (u != null) {
-                c.setCliNombre(persona.getCliNombre());
-                c.setCliApellido(persona.getCliApellido());
-                TiposDocumentos td = ctd.find(tipoDocumento);
-                c.setCliTipoDocumento(td);
-                Roles role = rfl.find(rol);
-                u.setRolTipo(role);
-                EstadosCiviles se = esfl.find(es);
-                c.setCliEstadoCivil(se);
-                c.setCliNumeroDocumento(persona.getCliNumeroDocumento());
-                c.setCliSexo(genero);
-                c.setCliEPS(persona.getCliEPS());
-                c.setCliFechaNacimiento(ParseFecha(fechaS));
-                c.setCliNumeroHijos(persona.getCliNumeroHijos());
-                c.setCliTelefono(persona.getCliTelefono());
-                c.setCliPais(persona.getCliPais());
-                c.setCliDirección(persona.getCliDirección());
+            if (this.file != null) {
                 
-                if (this.file != null) {
-                    String carpeta = "/home/anderson/NetBeansProjects/AnsyV5/src/main/webapp/resources/imagenes";
-                    c.setUrlImg(file.getContent());
-                    c.setNameImg(file.getFileName());
-                    escriByte(IOUtils.toByteArray(file.getInputStream()), carpeta, file.getFileName());
-                }
+                c.setUrlImg(file.getContent());
+                c.setNameImg(file.getFileName());
                 
-
-                if (usuario.getUsClave() != null) {
-                    u.setUsClave(usuario.getUsClave());
-                }
-                
-                
-                Usuarios vd = ufl.validarUsuarioReg(usuario.getUsCorreo());
-                if (vd == null) {
-                    u.setUsCorreo(usuario.getUsCorreo());
-                    cd.edit(c);
-                    ufl.edit(u);
-                    info("Se actualizo correctamente", "");
-                } else if(vd.getUsCorreo().equalsIgnoreCase(u.getUsCorreo())){
-                    u.setUsCorreo(usuario.getUsCorreo());
-                    cd.edit(c);
-                    ufl.edit(u);
-                    info("Se actualizo correctamente", "");
-                }else{error("El correo ya se encuentra registrado","");}
-                if (rol == 2) {
-                    
-                    usuario = ufl.find(usuario.getIdUsuario());
-                    persona = cd.find(usuario.getIDCliente().getIdCliente());
-                }
             }
-        } catch (IOException e) {
-            error("Error al actualizar los datos", "");
+            
+            
+            if (usuario.getUsClave() != null) {
+                u.setUsClave(usuario.getUsClave());
+            }
+            
+            
+            Usuarios vd = ufl.validarUsuarioReg(usuario.getUsCorreo());
+            if (vd == null) {
+                u.setUsCorreo(usuario.getUsCorreo());
+                cd.edit(c);
+                ufl.edit(u);
+                info("Se actualizo correctamente", "");
+            } else if(vd.getUsCorreo().equalsIgnoreCase(u.getUsCorreo())){
+                u.setUsCorreo(usuario.getUsCorreo());
+                cd.edit(c);
+                ufl.edit(u);
+                info("Se actualizo correctamente", "");
+            }else{error("El correo ya se encuentra registrado","");}
+            if (rol == 2) {
+                
+                usuario = ufl.find(usuario.getIdUsuario());
+                persona = cd.find(usuario.getIDCliente().getIdCliente());
+            }
         }
 
     }
@@ -328,7 +336,7 @@ public class CSession implements Serializable {
 
     }
 
-    public static Date ParseFecha(String fecha) {
+    public Date ParseFecha(String fecha) {
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         Date fechaDate = null;
         try {
@@ -468,11 +476,23 @@ public class CSession implements Serializable {
     public void setFile(UploadedFile file) {
         this.file = file;
     }
+    
+    
+
+    
 
     public void dowDoc() throws IOException {
         doc="../../resources/documentos/Plantilla-importar-clientes.xlsx";
         FacesContext facesContext = FacesContext.getCurrentInstance();
         facesContext.getExternalContext().redirect(doc);
+    }
+
+    public Citas getAgenCita() {
+        return agenCita;
+    }
+
+    public void setAgenCita(Citas agenCita) {
+        this.agenCita = agenCita;
     }
 
 }

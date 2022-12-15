@@ -32,6 +32,11 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Usuarios.findAll", query = "SELECT u FROM Usuarios u")})
 public class Usuarios implements Serializable {
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+    private Collection<Citas> citasCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+    private Collection<Comprobantes> comprobantesCollection;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -153,6 +158,22 @@ public class Usuarios implements Serializable {
     @Override
     public String toString() {
         return "edu.sena.entity.ansyt.Usuarios[ idUsuario=" + idUsuario + " ]";
+    }
+
+    public Collection<Citas> getCitasCollection() {
+        return citasCollection;
+    }
+
+    public void setCitasCollection(Collection<Citas> citasCollection) {
+        this.citasCollection = citasCollection;
+    }
+
+    public Collection<Comprobantes> getComprobantesCollection() {
+        return comprobantesCollection;
+    }
+
+    public void setComprobantesCollection(Collection<Comprobantes> comprobantesCollection) {
+        this.comprobantesCollection = comprobantesCollection;
     }
     
 }

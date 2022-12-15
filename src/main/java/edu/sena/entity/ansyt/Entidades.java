@@ -32,6 +32,10 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Entidades.findAll", query = "SELECT e FROM Entidades e")})
 public class Entidades implements Serializable {
 
+    @Lob
+    @Column(name = "Ent_img")
+    private byte[] entimg;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,9 +52,6 @@ public class Entidades implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "Ent_Descripcion")
     private String entDescripcion;
-    @Lob
-    @Column(name = "Ent_img")
-    private byte[] entimg;
     @Size(max = 300)
     @Column(name = "Name_img")
     private String nameimg;
@@ -152,5 +153,7 @@ public class Entidades implements Serializable {
     public String toString() {
         return "edu.sena.entity.ansyt.Entidades[ idEntidades=" + idEntidades + " ]";
     }
+
+
     
 }

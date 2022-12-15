@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&amp;display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assents/css/styles.css"></link>
+        <title>Certificado Afiliación</title>
+    </h:head>
+
+    <h:body>
+
+        <div class="d-flex">
+
+            <div id="sidebar-container" class="bg-primary">
+                <!-- Logo -->
+                <div class="logo d-flex">
+                    <img src="../assents/Img/LogoAsesoresDashboard.png" class="img-fluid rounded-circle mr-2 align-center"/> 
+                </div>
+                <!-- Menú -->
+                <div class="menu">
+                    <a href="index.xhtml" class="d-block text-light p-3"><i class="icon ion-md-home m-2 lead"></i>Inicio</a>
+                    <a href="actualizarDatos.xhtml" class="d-block text-light p-3"><i class="icon ion-md-sync m-2 lead"></i>Actualizar Datos</a>
+                    <a href="planesAdquiridos.xhtml" class="d-block text-light p-3"><i class="icon ion-md-pulse m-2 lead"></i>Planes Adquiridos</a>
+                    <a href="descargarCertificado.xhtml" class="d-block text-light p-3"><i class="icon ion-md-paper m-2 lead"></i>Descargar Certificado</a>
+                    <a href="ConsultarSolicitudesPQRS.xhtml" class="d-block text-light p-3"><i class="icon ion-md-chatboxes m-2 lead"></i>Consultar PQRS</a>
+                </div>
+                <div class="inicio-Sesion">
+                    <h6 class="text-light font-weight-bold text-center">Inicio sesión como: Cliente</h6>
+                </div>
+            </div>
+
+
+
+
+            <!-- Barra navegación -->
+            <div class="w-100">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="col-lg-3">  
+
+                                <!-- Barra busqueda -->
+                                <form class="d-flex position-relative my-2 d-inline-block">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                    <button class="btn btn-search position-absolute" type="submit"><i class="icon ion-md-search"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Columna vacia -->
+                            <div class="col-lg-6"></div>
+
+                            <!-- menu inicio sesion -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div class="col-lg-3">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p:graphicImage value="#{cSession.persona.urlImg}" alt="#{cSession.persona.nameImg}" cache="false" class="img-fluid rounded-circle mr-2"/>
+
+                                                 #{cSession.persona.cliNombre} #{cSession.persona.cliApellido}
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="perfilClientes.xhtml">Mi perfil</a></li>
+                                                <li><a class="dropdown-item" href="#">Notificaciones</a></li>
+                                                <li><hr class="dropdown-divider"></hr></li>
+                                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <!-- contenido -->
+
+              <form>
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                      <!-- Titulo --> 
+                                <br></br>
+                                <h3>Certificado de afiliación</h3>
+                                
+                                <!-- Descargar certificado -->
+                                <div class="container p-2">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="p-3 border bg-light rounded-2">
+                                                <h5>#{cSession.persona.cliNombre} #{cSession.persona.cliApellido}</h5>
+                                                <h6>#{cSession.persona.cliTipoDocumento.docNombre} #{cSession.persona.cliNumeroDocumento}</h6>
+                                                <h6>Cotizante</h6>                                           
+                                            
+                                            <!-- Boton Enviar -->
+                                            <div class="mb-3 w-100">                                              
+                                                <a href="../resources/documentos/CertificadoAfiliacion_ccsAsesores.pdf" class="btn btn-primary" type="button">Descargar Certificado</a>
+                                            </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>      
+                                
+                                
+                                
+                                <!-- Fin descargar certificado -->
+                                                             
+                            </div>
+                        </div>
+                    </div>
+              </form>
+                
+            </div>
+        </div>
+
+
+
+
+
+        <!--Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    </h:body>
+</html>
+
+

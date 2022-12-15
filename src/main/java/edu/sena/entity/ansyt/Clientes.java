@@ -37,6 +37,13 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Clientes.findAll", query = "SELECT c FROM Clientes c")})
 public class Clientes implements Serializable {
 
+    @Size(max = 150)
+    @Column(name = "Cli_Correo")
+    private String cliCorreo;
+    @Lob
+    @Column(name = "url_img")
+    private byte[] urlImg;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,9 +83,6 @@ public class Clientes implements Serializable {
     @Size(max = 45)
     @Column(name = "Cli_Direcci\u00f3n")
     private String cliDirección;
-    @Lob
-    @Column(name = "url_img")
-    private byte[] urlImg;
     @Size(max = 300)
     @Column(name = "name_img")
     private String nameImg;
@@ -276,5 +280,15 @@ public class Clientes implements Serializable {
     public String toString() {
         return "edu.sena.entity.ansyt.Clientes[ idCliente=" + idCliente + " ]";
     }
+
+    public String getCliCorreo() {
+        return cliCorreo;
+    }
+
+    public void setCliCorreo(String cliCorreo) {
+        this.cliCorreo = cliCorreo;
+    }
+
+
     
 }
